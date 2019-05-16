@@ -1,2 +1,2 @@
 # libft
-standerd library for coding
+Standerd library for coding
