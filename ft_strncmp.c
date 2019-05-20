@@ -6,11 +6,11 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:05:26 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/20 12:09:24 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/20 13:22:25 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd>
+#include
 
 int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
