@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 12:05:26 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/20 13:33:58 by dlinde           ###   ########.fr       */
+/*   Created: 2019/05/20 14:17:42 by dlinde            #+#    #+#             */
+/*   Updated: 2019/05/20 14:40:49 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+int		ft_atoi(const char *str)
 {
-	unsigned int i;
+	int neg;
+	int nb;
+	int n;
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
-		i++;
-	return (s1[i] - s2[i]);
+	neg = 1;
+	nb = 0;
+	n = 0;
+	while (str[n] == '\n' || str[n] == '\t' || str[n] == '\v' ||
+			str[n] == ' ' || str[n] == '\f' || str[n] == '\r')
+		n++;
+	if (str[n] == '-')
+		neg = -1;
+	if (str[n] == '-' || str[n] == '+')
+		n++;
+	while (str[n] >= '0' && str[n] <= '9')
+	{
+		nb = nb * 10 + (str[n] - '0');
+		n++;
+	}
+	return (nb * neg);
 }
