@@ -6,13 +6,11 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:23:48 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/20 12:27:31 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/20 15:11:13 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include
-
-int		ft_strlen(char *str)
+size_t		ft_strlen(const char *str)
 {
 	int n;
 
