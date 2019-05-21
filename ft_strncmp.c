@@ -6,18 +6,19 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:05:26 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/20 13:33:58 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/21 13:48:21 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+int		ft_strncmp(char *s1, char *s2, size_t n)
 {
-	unsigned int i;
+	int i;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
+	while ((s1[i] == s2[i]) && (s1[i] != '\0') &&
+			(s2[i] != '\0') && (i < (int)n - 1))
 		i++;
 	return (s1[i] - s2[i]);
 }

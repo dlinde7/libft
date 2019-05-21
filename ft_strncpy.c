@@ -6,18 +6,18 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:55:00 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/20 12:00:33 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/21 13:46:17 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strncpy(char *dest, char *src, size_t n)
 {
-	unsigned int i;
+	int i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (src[i] != '\0' && i < (int)n)
 	{
 		dest[i] = src[i];
 		i++;

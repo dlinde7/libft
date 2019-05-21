@@ -6,22 +6,22 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:20:55 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/20 16:27:46 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/21 13:41:50 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include
 
-char	*ft_strncat(char *s1, const char *s2, unsigned int n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	unsigned int i;
-	unsigned int z;
+	int i;
+	int z;
 
 	i = 0;
 	z = 0;
 	while (s1[i] != '\0')
 		i++;
-	while (s2[z] != '\0' && z < n)
+	while (s2[z] != '\0' && z < (int)n)
 	{
 		s1[i] = s2[z];
 		i++;

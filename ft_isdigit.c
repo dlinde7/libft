@@ -6,13 +6,13 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:50:58 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/21 12:53:27 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/21 13:24:30 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include
 
-int		ft_isdigit(unsigned char c)
+int		ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

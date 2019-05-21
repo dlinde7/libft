@@ -6,13 +6,13 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:53:55 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/21 12:55:06 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/21 13:23:11 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include 
 
-int		ft_isalpha(unsigned char c)
+int		ft_isalpha(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (1);

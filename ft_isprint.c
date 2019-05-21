@@ -6,13 +6,13 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:05:24 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/20 14:46:29 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/21 13:25:09 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include
 
-int		ft_isprint(char c)
+int		ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);
