@@ -6,13 +6,13 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:49:15 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/22 12:56:26 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/22 13:24:32 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int n;
 
