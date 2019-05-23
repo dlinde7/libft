@@ -6,11 +6,11 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:44:24 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/21 13:35:54 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/23 11:47:04 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include
+#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {

@@ -6,11 +6,11 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:57:02 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/22 13:00:22 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/23 11:51:09 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include
+#include "libft"
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,11 +6,11 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:55:00 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/21 13:46:17 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/23 11:53:22 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include
+#include "libft.h"
 
 char	*ft_strncpy(char *dest, char *src, size_t n)
 {
