@@ -6,13 +6,13 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:00:12 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/23 11:50:30 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/23 12:11:12 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		(char *dst, const char *src, size_t dstsize)
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t dlen;
 	size_t slen;
