@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 11:12:08 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/24 12:56:37 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/24 13:34:20 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *d, size_t n);
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
