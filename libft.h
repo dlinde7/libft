@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 11:12:08 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/24 12:12:43 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/24 12:25:02 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
+void	ft_putendl(char const *s);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
@@ -41,6 +42,7 @@ char	*ft_strdup(const char *s1);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(const char *s, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
 
 #endif
