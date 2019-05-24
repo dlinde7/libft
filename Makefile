@@ -6,7 +6,7 @@
 #    By: dlinde <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:38:37 by dlinde            #+#    #+#              #
-#    Updated: 2019/05/23 11:11:31 by dlinde           ###   ########.fr        #
+#    Updated: 2019/05/23 12:19:29 by dlinde           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJ = *.o
 
 CC	=	gcc
 
-FLAGS = -Wall -Wextra -Werror -I
+FLAGS = -Wall -Wextra -Werror
 
 FILES = *.c
 
@@ -26,11 +26,12 @@ $(NAME):
 	$(CC) $(FLAGS) -c $(FILES)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+	rm -f $(OBJ)
 
 clean:
-	rm $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
