@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 11:12:08 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/25 13:13:58 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/25 13:47:56 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void(*f)(unsigned int, char *));
+int		ft_strequ(const char *s1, const char *s2);
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
 
 #endif
