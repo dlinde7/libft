@@ -6,7 +6,7 @@
 #    By: dlinde <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:38:37 by dlinde            #+#    #+#              #
-#    Updated: 2019/05/23 12:19:29 by dlinde           ###   ########.fr        #
+#    Updated: 2019/05/27 15:51:54 by dlinde           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,14 @@ CC	=	gcc
 
 FLAGS = -Wall -Wextra -Werror
 
+LIB = libft.h
+
 FILES = *.c
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(FLAGS) -c $(FILES)
+	$(CC) $(FLAGS) -c $(FILES) -I $(LIB)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 	rm -f $(OBJ)
