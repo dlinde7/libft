@@ -1,41 +1,61 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 12:45:04 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/27 13:29:47 by dlinde           ###   ########.fr       */
+/*   Created: 2019/05/27 13:33:14 by dlinde            #+#    #+#             */
+/*   Updated: 2019/05/27 14:33:48 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+size_t	ft_len(int n)
 {
-	char	**new;
-	size_t	n;
+	int		x;
 	size_t	i;
-	size_t	z;
 
-	n = 0;
+	x = n;
 	i = 0;
-	if (!s || !(new = (char **)malloc(sizeof(char *) *
-					(ft_wordcount(s, c) + 1))))
-		return (NULL);
-	while ((int)n < ft_wordcount(s, c))
+	if (x < 0)
 	{
-		z = 0;
-		if (!(new[n] = ft_strnew(ft_wlen(&s[i], c) + 1)))
-			new[n] = NULL;
-		while (s[i] == c)
-			i++;
-		while (s[i] != c && s[i])
-			new[n][z++] = s[i++];
-		new[n][z] = '\0';
-		n++;
+		x *= -1;
+		i++;
 	}
-	new[n] = 0;
-	return (new);
+	while (x > 0)
+	{
+		x /= 10;
+		i++;
+	}
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	size_t	i;
+
+	i = ft_len(n);
+	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
+		return (NULL);
+	str = ft_strnew(i);
+	str[i--] = '\0';
+	if (n == 0)
+	{
+		str[0] = 48;
+		return (str);
+	}
+	if (n < 0)
+	{
+		str[0] = '-';
+		n *= -1;
+	}
+	while (n > 0)
+	{
+		str[i--] = (n % 10) + 48;
+		n /= 10;
+	}
+	return (str);
 }

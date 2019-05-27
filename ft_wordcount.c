@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 12:45:04 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/27 13:29:47 by dlinde           ###   ########.fr       */
+/*   Created: 2019/05/27 13:27:30 by dlinde            #+#    #+#             */
+/*   Updated: 2019/05/27 13:27:49 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+int		ft_wordcount(const char *s, char c)
 {
-	char	**new;
 	size_t	n;
 	size_t	i;
-	size_t	z;
 
 	n = 0;
 	i = 0;
-	if (!s || !(new = (char **)malloc(sizeof(char *) *
-					(ft_wordcount(s, c) + 1))))
-		return (NULL);
-	while ((int)n < ft_wordcount(s, c))
+	while (s[n])
 	{
-		z = 0;
-		if (!(new[n] = ft_strnew(ft_wlen(&s[i], c) + 1)))
-			new[n] = NULL;
-		while (s[i] == c)
+		while (s[n] == c && s[n] != '\0')
+			n++;
+		if (s[n] != c && s[n] != '\0')
 			i++;
-		while (s[i] != c && s[i])
-			new[n][z++] = s[i++];
-		new[n][z] = '\0';
-		n++;
+		while (s[n] != c && s[n] != '\0')
+			n++;
 	}
-	new[n] = 0;
-	return (new);
+	return ((int)i);
 }
