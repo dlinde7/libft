@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:26:36 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/27 12:11:38 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/27 12:15:23 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char	*new;
 	size_t	n;
 	size_t	i;
 	size_t	x;
@@ -30,7 +29,5 @@ char	*ft_strtrim(char const *s)
 				|| s[x - 1] == '\n' || s[x - 1] == '\t'))
 		x--;
 	i = x - n;
-	new = ft_strsub(s, n, i);
-	new[i] = '\0';
-	return (new);
+	return (ft_strsub(s, n, i));
 }
