@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 11:12:08 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/27 10:49:06 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/27 13:11:18 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,10 @@ void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	**ft_strsplit(char const *s, char c);
 
 #endif
