@@ -6,13 +6,13 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 13:33:14 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/27 14:43:50 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/28 10:13:20 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_len(long n)
+static int	ft_len(long n)
 {
 	long	x;
 	size_t	i;
@@ -32,7 +32,7 @@ size_t	ft_len(long n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*str;
 	long	z;

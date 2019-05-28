@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:19:58 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/27 10:23:13 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/05/28 11:31:40 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ char	*ft_strnew(size_t size)
 {
 	char *str;
 
-	str = malloc(size);
-	ft_strncpy(str, "\0", size);
+	if (!(str = malloc(size + 1)))
+		return (NULL);
+	ft_strncpy(str, "\0", size + 1);
 	return (str);
 }
