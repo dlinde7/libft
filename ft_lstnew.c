@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 12:05:26 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/28 12:38:55 by dlinde           ###   ########.fr       */
+/*   Created: 2019/05/28 14:30:58 by dlinde            #+#    #+#             */
+/*   Updated: 2019/05/28 14:39:17 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	int i;
+	t_list	*list;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while ((s1[i] == s2[i]) && s1[i] && (i < (int)n - 1))
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	if (!(list = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	if (!content)
+	{
+		list->content = NULL;
+		list->content_size = 0;
+	}
+	else
+	{
+		if (!(list->content = malloc(content_size)))
+			return (NULL);
+		ft_memcpy(list->content, content, content_size);
+		list->content_size = content_size;
+	}
+	list->next = NULL;
+	return (list);
 }
