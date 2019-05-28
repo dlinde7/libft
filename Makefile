@@ -6,7 +6,7 @@
 #    By: dlinde <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:38:37 by dlinde            #+#    #+#              #
-#    Updated: 2019/05/28 10:07:02 by dlinde           ###   ########.fr        #
+#    Updated: 2019/05/28 16:40:32 by dlinde           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ $(NAME):
 	$(CC) $(FLAGS) -c $(FILES) -I $(LIB)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+	rm -f $(OBJ)
 
 clean:
 	rm -f $(OBJ)
